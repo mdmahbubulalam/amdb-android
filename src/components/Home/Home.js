@@ -2,12 +2,14 @@
 /* eslint-disable prettier/prettier */
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useRef, useState } from 'react';
-import { Image, RefreshControl, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, RefreshControl, ScrollView, Text, TextInput, TouchableOpacity, View, Dimensions } from 'react-native';
 import styles from './styles';
-import logo from '../../../assets/logo.png'
+import logo from '../../../assets/logo.png';
+let devcieWidth = Dimensions.get('window').width;
 
 
 const Home = () => {
+  
     const topRated = [
       {
         "Title": "Don't Look Up",
@@ -245,8 +247,8 @@ const Home = () => {
                  <View>
                       <Image source={require('../../../assets/logo.png')}
                         style={{
-                            height:40,
-                            width:150,
+                            height:70,
+                            width:155,
                            
                         }}
                     />
@@ -281,7 +283,7 @@ const Home = () => {
                                     style ={
                                         { 
                                             height:300, 
-                                            width:'100%',
+                                            width:devcieWidth/2-16,
                                         } 
                                     }
                                     />
